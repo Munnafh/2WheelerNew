@@ -37,9 +37,20 @@
         <link rel="shortcut icon" href="images/ico/favicon.ico">
 		   
 		   <link rel="stylesheet" type="text/css" href="css/Style4.css" />
-		   <link rel="stylesheet" type="text/css" href="js/Style3.css" />
       </head>  
       <body>  
+	  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+   
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="AdminHome.php">Home</a></li>
+      <li><a href="Addcar2.php"><span class="glyphicon glyphicon-user"></span> Add Car</a></li>
+      <li><a href="Modify_Car.php"><span class="glyphicon glyphicon-user"></span> Modify Car</a></li>
+      <li><a href="AdminLogin.html"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+    </ul>
+  </div>
+</nav>
+	  
            <div class="row">
     <div class="col-md-6 col-sm-12 col-lg-6 col-md-offset-3">
 		<div class="panel panel-primary">
@@ -155,8 +166,7 @@
                 }  
                 ?>  
                 </table> -->  
-				<br><br><br>
-			<center>	<a class="btn btn-theme btn-lg" href="http://localhost:8080/dwCode-master/AdminHome.php">Admin Home</a></center>
+				
            </div> 
       </body>  
  </html>  
