@@ -4,7 +4,7 @@
 </head>
 
 <body>
-
+ <center>
 <?php
 
 
@@ -24,15 +24,24 @@ if(!$con)
  }
  
  
- //$username="select username from admin where id=1";
+ $sql="select * from admin where id=1";
  
- //$password="select password from admin where id=1";
+ $records=mysqli_query($con,$sql);
  
- //$a=mysqli_query($con,$username);
- 
- //$b=mysqli_query($con,$password);
+ while($row = mysqli_fetch_array($records))
+ {
+	 
+	$username= $_POST['username'];
+	 
+	$password= $_POST['password'];
+	
+	
+	$username1= $row['username'];
+	 
+	$password1= $row['password'];
+ }
 
- if('admin' == $_POST['username'] && 'admin123' == $_POST['password'] )
+ if($username== $username1 && $password == $password1 )
  {
 	 session_start();
   
@@ -47,12 +56,12 @@ if(!$con)
 else
 
 {
-   echo 'Enter Correct Username and Password';
+  echo 'Enter Correct Username and Password';
    
-   header("refresh:5 url=AdminLogin.html");
+   header("refresh:2 url=AdminLogin.html");
 }
 
 ?>
-
+</center>
 </body>
 </html>
