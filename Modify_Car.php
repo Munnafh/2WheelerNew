@@ -66,10 +66,21 @@
 		   <link rel="stylesheet" type="text/css" href="css/Style4.css" />
 		   <link rel="stylesheet" type="text/css" href="css/Style5.css" />
 		   <link rel="stylesheet" type="text/css" href="js/Style3.css" />
-		   
+		   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
       </head>  
       <body  background="images/background.jpg">
-	  <br>
+	  
+	  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+   
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="AdminHome.php">Home</a></li>
+      <li><a href="Addcar2.php"><span class="glyphicon glyphicon-user"></span> Add Car</a></li>
+      <li><a href="Modify_Car.php"><span class="glyphicon glyphicon-user"></span> Modify Car</a></li>
+      <li><a href="AdminLogin.html"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+    </ul>
+  </div>
+</nav>
 	  <div class="container">
    
 	<div class="col-lg-12 well">
@@ -272,11 +283,8 @@ or die ('Cannot connect to db');
                   $name = $row['wheeler_name']; 
                  echo "<option value='". $row['id']."'>".$row['Car_Name'].'</option>';
 				 
-				  
-
 }
-
-   
+  
 ?> 
 </select>
 							</div>
@@ -301,25 +309,16 @@ or die ('Cannot connect to db');
 						</center>
 							</div>
 							<div class="col-sm-4 form-group">
-	</div>
-					
-					 					
-					</div>
-					
-					
-					
-				</form>
+</div>				
+</div>					
+</form>
 <br>
-			
-				</div>
-	</div>
-	</div>
 </div>
-<center>	<a class="btn btn-theme btn-lg" style="color:black;" href="http://localhost:8080/dw/AdminHome.html">Admin Home</a></center>	
+</div>
+</div>
+</div>	
 </body>  
 </html> 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-</script>
 <script>
 $(document).ready(function(){
     $('#purpose').on('change', function() {
