@@ -7,73 +7,41 @@
 -->
 <html lang="en">
     
-    <head>
-        <meta charset=utf-8>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Destiny Wheels</title>
-        <!-- Load Roboto font -->
-        <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-        <!-- Load css styles -->
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-        <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css" />
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <link rel="stylesheet" type="text/css" href="css/pluton.css" />
-        <!--[if IE 7]>
-            <link rel="stylesheet" type="text/css" href="css/pluton-ie7.css" />
-        <![endif]-->
-        <link rel="stylesheet" type="text/css" href="css/jquery.cslider.css" />
-        <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css" />
-        <link rel="stylesheet" type="text/css" href="css/animate.css" />
-        <!-- Fav and touch icons -->
+     <head>  
+           <title>Destiny Wheels</title>  
+		   
+		   <!-- Fav and touch icons -->
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114.png">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72.png">
         <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57.png">
         <link rel="shortcut icon" href="images/ico/favicon.ico">
-		<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
- <link rel="stylesheet" type="text/css" href="css/pop.css" />
-
-  	
-
-    </head>
+		
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script> 
+           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
+           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+		   
+		   <link rel="stylesheet" type="text/css" href="css/Style4.css" />
+		   <link rel="stylesheet" type="text/css" href="css/Style5.css" />
+		   
+		   
+      </head> 
 <body style="color:black;" >
-<br>
-<center><h3>Admin Section!! Only For Admin Uses</h3></center>
-<div class="container">
+ <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
    
-	<div class="col-lg-12 well">
-	<div class="row">
-	<div class="col-sm-4 form-group">
-	</div>
-							<div class="col-sm-4 form-group">
-							
-								<center>
-								<a class="btn btn-theme btn-lg" href="http://localhost:8080/dwCode-master/Addcar2.php">Add Car</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-
-<a class="btn btn-theme btn-lg" href="http://localhost:8080/dwCode-master/Modify_Car.php">Modify Car</a>
-						</center>
-							</div>
-							<div class="col-sm-4 form-group">
-	</div>
-							</div></div></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="AdminHome.php">Home</a></li>
+      <li><a href="Addcar2.php"><span class="glyphicon glyphicon-user"></span> Add Car</a></li>
+      <li><a href="Modify_Car.php"><span class="glyphicon glyphicon-user"></span> Modify Car</a></li>
+      <li><a href="Logout.php"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+    </ul>
+  </div>
+</nav>
 <div class="container">
 
 		<div class="row">
-							<div class="col-sm-4 col-sm-4 col-sm-4 ">
+							<div class="col-lg-12 form-group ">
 								<h2>2 Wheeler Lists :-</h2>
 								<br>
 
@@ -150,13 +118,15 @@ if(!$con)
 	 
  }
  
+// session_destroy();
  
 }
 else
 	
 {
+	session_destroy();
 
-	echo '<h3><font color="red">Please Login First</font></h3>';	
+	header("refresh:0 url=AdminLogin.html");	
 }
  
  
@@ -171,10 +141,12 @@ else
  
  
 </table>
-<br>
-
+</div>
+</div>
+<div class="row">
+<div class="col-lg-12 form-group">
 <h2>Customer Details</h2>
-								<br>
+								
 
 <table class='table table-bordered'>
   <tr>
@@ -241,7 +213,7 @@ if(!$con)
 else
 {
 	
-	echo '<h3><font color="red">Please Login First</font></h3>';
+	header("refresh:0 url=AdminLogin.html");
 }
  
  
@@ -252,8 +224,10 @@ else
  ?>
  
 </table>
-
-<br>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-12 form-group ">
 								<h2>Contact Us Table :-</h2>
 								<br>
 
@@ -306,7 +280,7 @@ if(!$con)
 else
 {
 	
-	echo '<h3><font color="red">Please Login First</font></h3>';
+	header("refresh:0 url=AdminLogin.html");
 }
  
  
