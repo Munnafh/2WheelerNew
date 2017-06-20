@@ -74,9 +74,9 @@
   <div class="container-fluid">
    
     <ul class="nav navbar-nav">
-      <li class="active"><a href="AdminHome.php">Home</a></li>
+      <li><a href="AdminHome.php">Home</a></li>
       <li><a href="Addcar2.php"><span class="glyphicon glyphicon"></span> Add Car</a></li>
-      <li><a href="Modify_Car.php"><span class="glyphicon glyphicon"></span> Modify Car</a></li>
+      <li class="active"><a href="Modify_Car.php"><span class="glyphicon glyphicon"></span> Modify Car</a></li>
       <li><a href="AdminLogin.html"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
     </ul>
   </div>
